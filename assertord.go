@@ -172,7 +172,7 @@ type tHelper interface {
 	Helper()
 }
 
-// IsOrdered asserts that the specified object is ordered
+// IsOrdered asserts that the specified collection is ordered ascending or desceding
 func IsOrdered(t assert.TestingT, object interface{}, msgAndArgs ...interface{}) bool {
 	if h, ok := t.(tHelper); ok {
 		h.Helper()
@@ -190,7 +190,7 @@ func IsOrdered(t assert.TestingT, object interface{}, msgAndArgs ...interface{})
 	return ordered
 }
 
-// IsNotOrdered asserts that the specified object is not ordered
+// IsNotOrdered asserts that the specified collection is ordered
 func IsNotOrdered(t assert.TestingT, object interface{}, msgAndArgs ...interface{}) bool {
 	if h, ok := t.(tHelper); ok {
 		h.Helper()
@@ -208,7 +208,7 @@ func IsNotOrdered(t assert.TestingT, object interface{}, msgAndArgs ...interface
 	return !ordered
 }
 
-// IsOrderedAsc asserts that the specified object in ascending order
+// IsOrderedAsc asserts that the specified collection is ordered ascending
 func IsOrderedAsc(t assert.TestingT, object interface{}, msgAndArgs ...interface{}) bool {
 	if h, ok := t.(tHelper); ok {
 		h.Helper()
@@ -226,7 +226,7 @@ func IsOrderedAsc(t assert.TestingT, object interface{}, msgAndArgs ...interface
 	return ordered
 }
 
-// IsNotOrderedAsc asserts that the specified object in not ascending order
+// IsNotOrderedAsc asserts that the specified collection is not ordered ascending
 func IsNotOrderedAsc(t assert.TestingT, object interface{}, msgAndArgs ...interface{}) bool {
 	if h, ok := t.(tHelper); ok {
 		h.Helper()
@@ -244,7 +244,7 @@ func IsNotOrderedAsc(t assert.TestingT, object interface{}, msgAndArgs ...interf
 	return !ordered
 }
 
-// IsOrderedDesc asserts that the specified object in desceding order
+// IsOrderedDesc asserts that the specified collection is ordered desceding
 func IsOrderedDesc(t assert.TestingT, object interface{}, msgAndArgs ...interface{}) bool {
 	if h, ok := t.(tHelper); ok {
 		h.Helper()
@@ -262,7 +262,7 @@ func IsOrderedDesc(t assert.TestingT, object interface{}, msgAndArgs ...interfac
 	return ordered
 }
 
-// IsNotOrderedDesc asserts that the specified object in not desceding order
+// IsNotOrderedDesc asserts that the specified collection is not ordered desceding
 func IsNotOrderedDesc(t assert.TestingT, object interface{}, msgAndArgs ...interface{}) bool {
 	if h, ok := t.(tHelper); ok {
 		h.Helper()
